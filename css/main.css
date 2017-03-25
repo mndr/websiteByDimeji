@@ -1,0 +1,385 @@
+html, body {
+    margin: auto;
+    font-family: kankin;
+}
+
+@font-face {
+   font-family: "Kankin";
+   src: url("https://raw.githubusercontent.com/daysleeperx/cloud_bar/master/img/Kankin.ttf");
+}
+
+/************************//*Navbar*//*************************/
+.navbar {
+    width: 100%;
+    height: 90px;
+    z-index: 999;
+    top: 0px;
+    margin: 0 auto;
+    background: black;
+    display: flex;
+    position: fixed;
+    border-bottom: double 4px #FFF;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: kankin;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.links>li>a {
+    text-decoration: none;
+    padding: 36px 70px;
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+.nav-item:hover {
+    background-color: #555;
+
+}
+
+.lang {
+    background: url(down-arrow.svg) no-repeat;
+    background-position-x: 72%;
+    background-position-y: 51%;
+    background-size: 4%;
+
+}
+
+#Logo {
+
+    background-image: url(logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+}
+
+/************************//*Sections*//***********************/
+
+#Menu {
+    margin-top: 26%;
+    display: flex;
+    padding: 100px;
+    flex-wrap: wrap;
+}
+
+#About {
+    display: flex;
+    padding: 100px;
+    color: #FFF;
+    flex-wrap: wrap;
+}
+
+#Contact {
+    display: flex;
+    padding: 100px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#Contact p {
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 72pt;
+    flex: 1;
+    flex-grow: 3;
+    letter-spacing: 8px;
+}
+
+p {
+    flex-grow: 1;
+    flex: 2;
+}
+
+#Contact img {
+    flex: 3;
+    flex-grow: 1;
+}
+
+.show {
+    display: block;
+}
+
+/**************************//*Slider*//**********************************/
+
+
+.slider {
+  top: 93px;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 55%;
+}
+
+.slide-viewer {
+    width: 100%;
+    position: absolute; /* needed for IE7 */
+    overflow: hidden;
+    height: 100%;
+}
+
+.slides {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    display: none;
+    position: absolute;
+}
+
+.slide>img {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+.slide:first-child {
+    display: block;}
+
+
+/************************//********** BULLETS **********//**************************/
+
+.bullets {
+    position: absolute;
+    width: 50%;
+    bottom: 13%;
+    left: 19%;
+    margin: 0;
+}
+
+.bullet {
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  border: white solid 2px;
+  border-radius: 50%;
+  margin: 0 12px;
+
+  background: transparent;
+  /*box-shadow: 0px 0px 4px rgba( 0, 0, 0, 0.2 );*/
+  cursor: pointer;
+
+  /*-webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );*/
+}
+
+.bullet.active, .bullet:hover {
+    background: white;
+  /*color: #ed8e6c;*/
+  cursor: pointer;
+}
+
+  /************************//*CONTROLLERS*//****************************/
+
+.controllers {
+      position: absolute;
+      z-index: 998;
+      display: flex;
+      list-style: none;
+      align-items: flex-end;
+      right: 14%;
+      width: 8%;
+      bottom: 13%;
+      overflow: hidden;
+      justify-content: space-between;
+      cursor: pointer;
+  }
+
+  .next {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      position: relative;
+      width: 30px;
+      height: 30px;
+      right: -999%;
+      opacity: 0.8;
+  }
+
+  .prev {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      left: -9999%;
+      opacity: 0.8;
+  }
+
+  .next:hover {
+      opacity: 1;
+  }
+
+  .prev:hover {
+      opacity: 1;
+  }
+
+/************************//*Dropdown*//*************************/
+
+.nav-content {
+    position: absolute;
+    width: 212.06px;
+    height: 90px;
+    top: 90px;
+    overflow: hidden;
+    background-color: #000;
+    max-height: 0;
+}
+
+.nav-sub {
+    height: 90px;
+}
+
+.nav-sub ul {
+    height: 90px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-sub li {
+    padding: 0 20px 10px 20px;
+}
+
+.nav-sub ul li a {
+
+    display: inline-block;
+    padding: 12px 110px 5px 50px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-content a:hover {
+    text-decoration: underline;
+}
+
+.nav-item:focus {
+    background-color: #444;
+}
+
+.nav-item:hover ~ .nav-content {
+    max-height: 90px;
+    -webkit-transition:max-height 0.4s ease-in;
+    -moz-transition:max-height 0.4s ease-in;
+}
+
+.nav-content:hover {
+    max-height: 90px;
+}
+
+.burger-nav {
+    display: none;
+}
+
+
+/*********************************//*MEDIA QUERIES*//*****************************/
+
+
+/*******************************//*TABLETS*//************************************/
+
+@media screen and (max-width: 985px) {
+
+
+.burger-nav {
+        display: block;
+        height: 91px;
+        width: 100%;
+        background: url(menu.svg) no-repeat;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .open {
+        position: absolute;
+        list-style: none;
+        top: 78px;
+        background-color: #000;
+        width: 100%;
+        padding: 0;
+    }
+
+    .open li {
+        width: 100%;
+        padding: 15px 10px 10px 10px;
+        text-transform: uppercase;
+        font-size: x-large;
+        border-bottom: 1px solid #444;
+    }
+
+    .open li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .open li:hover {
+        background-color: #555;
+    }
+
+    li {
+        display: none;
+    }
+}
+
+
+/******************************//*MOBILES*/ /*******************************************/
+
+@media screen and (max-width: 640px) {
+    .burger-nav {
+        display: block;
+        height: 91px;
+        width: 100%;
+        background: url(menu.svg) no-repeat;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .open {
+        position: absolute;
+        list-style: none;
+        top: 78px;
+        background-color: #000;
+        width: 100%;
+        padding: 0;
+    }
+
+    .open li {
+        width: 100%;
+        padding: 15px 10px 10px 10px;
+        text-transform: uppercase;
+        font-size: x-large;
+        border-bottom: 1px solid #444;
+    }
+
+    .open li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .open li:hover {
+        background-color: #555;
+    }
+
+    li {
+        display: none;
+    }
+    
+    h1 {
+        font-size: 48pt;
+
+    }
+}
